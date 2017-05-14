@@ -9,7 +9,7 @@ built by <a href="https://open.segment.com">Segment</a>
 
 ## Features
 
-- *6kb!* minified
+- **6kb!** minified
 - Completely customizable CSS that won't conflict with page styles
 - Mount any iframe or React component
 
@@ -65,7 +65,7 @@ npm run dev
 
 For development, you need to load it as an unpacked extension:
 
-![How to load unpacked extension](https://i.imgur.com/yWVu30C.gifv)
+![How to load unpacked extension](https://i.imgur.com/yWVu30C.gif)
 
 Now, you should have a chrome sidebar extension on all of your pages!
 
