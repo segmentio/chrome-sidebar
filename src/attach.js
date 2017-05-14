@@ -3,7 +3,7 @@ export function attachHeadersListener({
   webRequest,
   hosts,
   iframeHosts,
-  dangerouslyOverrideFrameOptions
+  overrideFrameOptions
 }) {
   if (typeof hosts !== 'string') {
     if (hosts) {
@@ -23,7 +23,7 @@ export function attachHeadersListener({
 
   const types  = ['main_frame']
 
-  if (dangerouslyOverrideFrameOptions) {
+  if (overrideFrameOptions) {
     types.push('sub_frame')
   }
 
@@ -40,12 +40,12 @@ export function attachHeadersListener({
         csp = csp.replace('frame-src', `frame-src ${iframeHosts}`)
         csp = csp.replace('child-src', `child-src ${hosts}`)
 
-        if (dangerouslyOverrideFrameOptions) {
+        if (overrideFrameOptions) {
           csp = csp.replace(/frame-ancestors (.*?);/ig, '')
         }
 
         header.value = csp
-      } else if (isFrameHeader && dangerouslyOverrideFrameOptions) {
+      } else if (isFrameHeader && overrideFrameOptions) {
         header.value = 'ALLOWALL'
       }
 
