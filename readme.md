@@ -9,7 +9,7 @@ built by <a href="https://open.segment.com">Segment</a>
 
 ## Demo
 
-![Chrome sidebar demo](http://i.imgur.com/LA3XSXb.gif)
+![Chrome sidebar demo](https://i.imgur.com/1gKJeYP.gif)
 
 ## Features
 
