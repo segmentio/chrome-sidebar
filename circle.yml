@@ -10,7 +10,7 @@ dependencies:
     - npm config set "//registry.npmjs.org/:_authToken" $NPM_AUTH
   override:
     - yarn
-    - yarn build
+    - yarn dist
 
 test:
   override:
