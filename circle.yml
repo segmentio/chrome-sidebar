@@ -1,0 +1,24 @@
+machine:
+  node:
+    version: 7
+
+dependencies:
+  cache_directories:
+     - node_modules
+     - ~/.yarn-cache
+  pre:
+    - npm config set "//registry.npmjs.org/:_authToken" $NPM_AUTH
+  override:
+    - yarn
+    - yarn build
+
+test:
+  override:
+    - echo tests soon
+    # - make test
+
+deployment:
+  publish:
+    tag: /[0-9]+(\.[0-9]+)*(-.+)?/
+    commands:
+      - npm publish

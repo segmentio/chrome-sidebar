@@ -1,0 +1,20 @@
+{
+  "passPerPreset": true,
+  "presets": [
+    "react",
+    "es2015",
+    "babili"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-class-properties"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "es2015",
+        "./babel"
+       ]
+    }
+  }
+}

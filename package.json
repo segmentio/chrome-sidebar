@@ -1,0 +1,47 @@
+{
+  "name": "chrome-sidebar",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "fly build",
+    "dist": "fly dist",
+    "dev": "fly"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "debug": "^2.6.6",
+    "glamor": "^2.20.25",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "6.24.0",
+    "babel-eslint": "^7.2.3",
+    "babel-generator": "6.24.0",
+    "babel-loader": "6.4.1",
+    "babel-plugin-module-resolver": "2.6.2",
+    "babel-plugin-react-require": "3.0.0",
+    "babel-plugin-transform-class-properties": "6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.24.0",
+    "babel-plugin-transform-object-rest-spread": "6.22.0",
+    "babel-plugin-transform-react-jsx-source": "6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.3.3",
+    "babel-plugin-transform-runtime": "6.22.0",
+    "babel-preset-babili": "^0.0.12",
+    "babel-preset-latest": "6.24.0",
+    "babel-preset-node6-es6": "^11.2.5",
+    "babel-preset-react": "6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "6.23.0",
+    "butternut": "^0.4.1",
+    "fly": "^2.0.5",
+    "fly-babel": "^2.1.1",
+    "fly-clear": "^1.0.1",
+    "fly-esnext": "^2.0.1",
+    "fly-uglify": "^2.1.1",
+    "fly-watch": "^1.1.1",
+    "node-notifier": "^5.1.2",
+    "webpack": "^2.5.1"
+  }
+}
