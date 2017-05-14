@@ -7,6 +7,10 @@ built by <a href="https://open.segment.com">Segment</a>
 <a href="https://npmjs.com/package/chrome-iframe-sheet"><img src="https://img.shields.io/npm/v/chrome-iframe-sheet.svg" /></a>
 </p>
 
+## Demo
+
+![Chrome sidebar demo](http://i.imgur.com/LA3XSXb.gif)
+
 ## Features
 
 - **6kb!** minified
@@ -65,7 +69,7 @@ npm run dev
 
 For development, you need to load it as an unpacked extension:
 
-![How to load unpacked extension](https://i.imgur.com/yWVu30C.gif)
+![How to load unpacked extension](http://i.imgur.com/CYAw5mf.gif)
 
 Now, you should have a chrome sidebar extension on all of your pages!
 
