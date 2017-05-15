@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
 import { css } from 'glamor'
-import { node, object, string, number } from 'prop-types'
+import { node, object, string, number, func } from 'prop-types'
 
 const iframeClass = css({
   border: 'none',
@@ -84,6 +84,7 @@ export class Frame extends Component {
           })}
           style={maskStyle}
           onClick={this.onMaskClick}
+          ref={mask => this.mask = mask}
         />
 
         <div
@@ -103,6 +104,8 @@ export class Frame extends Component {
             })}
             style={iframeStyle}
             src={url}
+            ref={frame => this.frame = frame}
+            onLoad={this.onLoad}
           />
 
           {containerChildren}
@@ -126,7 +129,10 @@ export class Frame extends Component {
     containerClassName: '',
     containerStyle: {},
     iframeClassName: '',
-    iframeStyle: {}
+    iframeStyle: {},
+    onMount: () => {},
+    onUnmount: () => {},
+    onLoad: () => {}
   }
 
   static propTypes = {
@@ -139,13 +145,21 @@ export class Frame extends Component {
     iframeClassName: string,
     iframeStyle: object,
     children: node,
-    containerChildren: node
+    containerChildren: node,
+    onMount: func,
+    onUnmount: func,
+    onLoad: func
   }
 
   componentDidMount() {
-    const { delay } = this.props
+    const { delay, onMount } = this.props
 
     window[FRAME_TOGGLE_FUNCTION] = this.toggleFrame
+
+    onMount({
+      mask: this.mask,
+      frame: this.frame
+    })
 
     this._visibleRenderTimeout = setTimeout(() => {
       this.setState({
@@ -155,8 +169,24 @@ export class Frame extends Component {
   }
 
   componentWillUnmount() {
+    const { onUnmount } = this.props
+
+    onUnmount({
+      mask: this.mask,
+      frame: this.frame
+    })
+
     delete window[FRAME_TOGGLE_FUNCTION]
     clearTimeout(this._visibleRenderTimeout)
+  }
+
+  onLoad = () => {
+    const { onLoad } = this.props
+
+    onLoad({
+      mask: this.mask,
+      frame: this.frame
+    })
   }
 
   onMaskClick = () => {
