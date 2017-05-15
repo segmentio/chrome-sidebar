@@ -183,7 +183,6 @@ export class Frame extends Component {
   onLoad = () => {
     const { onLoad } = this.props
 
-
     onLoad({
       mask: this.mask,
       frame: this.frame
