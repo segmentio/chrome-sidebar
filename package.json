@@ -41,7 +41,7 @@
     "fly-esnext": "^2.0.1",
     "fly-uglify": "^2.1.1",
     "fly-watch": "^1.1.1",
-    "node-notifier": "^5.1.2",
+    "node-notifier": "^8.0.1",
     "webpack": "^2.5.1"
   }
 }
