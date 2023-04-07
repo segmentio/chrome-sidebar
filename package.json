@@ -12,8 +12,8 @@
     "classnames": "^2.2.5",
     "debug": "^2.6.6",
     "glamor": "^2.20.25",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react": "^15.7.0",
+    "react-dom": "^15.7.0"
   },
   "devDependencies": {
     "babel-core": "6.24.0",
