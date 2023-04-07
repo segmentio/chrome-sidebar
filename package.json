@@ -11,7 +11,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "debug": "^2.6.6",
-    "glamor": "^2.20.25",
+    "glamor": "^2.20.40",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
